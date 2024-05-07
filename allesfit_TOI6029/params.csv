@@ -1,0 +1,41 @@
+#name,value,fit,bounds,label,unit
+#companion b astrophysical params,,,,,
+b_rr,0.057,1,uniform 0.0 0.095,$R_b / R_\star$,
+b_rsuma,0.14,1,uniform 0.0 1.0,$(R_\star + R_b) / a_b$,
+b_cosi,0.01,1,uniform 0.0 1.0,$\cos{i_b}$,
+b_epoch,2459887.421647871,1,uniform 2459887.0 2459888.0,$T_{0;b}$,$\mathrm{BJD}$
+b_period,5.79617632,1,uniform 5.74978 5.84978,$P_b$,$\mathrm{d}$
+b_K,0.15,1,uniform -0.1 0.4,$K_b$,$\mathrm{km/s}$
+b_f_c,0.0,1,uniform -1 1,$\sqrt{e_b} \cos{\omega_b}$,
+b_f_s,0.0,1,uniform -1 1,$\sqrt{e_b} \sin{\omega_b}$,
+host_lambda,-20.0,1,uniform -180.0 180.0,$\lambda_b$,$^\circ$
+#vsini,,,,,
+host_vsini,10.4,1,uniform 9.0 12.0,$v\sin{i}$,$\mathrm{km/s}$
+#dilution per instrument,,,,,
+dil_TESS,0.0,0,trunc_normal 0 1 0.0 0.0,$D_\mathrm{0; TESS}$,
+#limb darkening coefficients per instrument,,,,,
+host_ldc_q1_TESS,0.3,1,uniform 0.0 1.0,$q_{1; \mathrm{TESS}}$,
+host_ldc_q2_TESS,0.3,1,uniform 0.0 1.0,$q_{2; \mathrm{TESS}}$,
+host_ldc_q1_KeckHIRESrm,0.7,1,uniform 0.0 1.0,$q_{1; \mathrm{KeckHIRES}}$,
+host_ldc_q2_KeckHIRESrm,0.7,1,uniform 0.0 1.0,$q_{2; \mathrm{KeckHIRES}}$,
+#surface brightness per instrument and companion,,,,,
+b_sbratio_TESS,0.0,0,trunc_normal 0 1 0.0 0.0,$J_{b; \mathrm{TESS}}$,
+b_sbratio_KeckHIRES,0.0,0,trunc_normal 0 1 0.0 0.0,$J_{b; \mathrm{KeckHIRES}}$,
+#albedo per instrument and companion,,,,,
+host_geom_albedo_TESS,0.0,0,trunc_normal 0 1 0.0 0.0,$A_{\mathrm{geom}; host; \mathrm{TESS}}$,
+host_geom_albedo_KeckHIRES,0.0,0,trunc_normal 0 1 0.0 0.0,$A_{\mathrm{geom}; host; \mathrm{KeckHIRES}}$,
+b_geom_albedo_TESS,0.0,0,trunc_normal 0 1 0.0 0.0,$A_{\mathrm{geom}; b; \mathrm{TESS}}$,
+b_geom_albedo_KeckHIRES,0.0,0,trunc_normal 0 1 0.0 0.0,$A_{\mathrm{geom}; b; \mathrm{KeckHIRES}}$,
+#gravity darkening per instrument and companion,,,,,
+host_gdc_TESS,0.0,0,trunc_normal 0 1 0.0 0.0,$Grav. dark._{b; \mathrm{TESS}}$,
+host_gdc_KeckHIRES,0.0,0,trunc_normal 0 1 0.0 0.0,$Grav. dark._{b; \mathrm{KeckHIRES}}$,
+#spots per instrument and companion,,,,,
+#errors per instrument,
+ln_err_flux_TESS,-7.0,0,uniform -15.0 0.0,$\ln{\sigma_\mathrm{TESS}}$,$\ln{ \mathrm{rel. flux.} }$
+# ln_jitter_rv_KeckHIRES,-3.0,1,uniform -15.0 0.0,$\ln{\sigma_\mathrm{jitter; KeckHIRES}}$,$\ln{ \mathrm{km/s} }$
+ln_jitter_rv_KeckHIRES,-4.0,1,uniform -10.0 -3.0,$\ln{\sigma_\mathrm{jitter; KeckHIRES}}$,$\ln{ \mathrm{km/s} }$
+ln_jitter_rv_KeckHIRESrm,-4.0,1,uniform -10.0 -3.0,$\ln{\sigma_\mathrm{jitter; KeckHIRESrm}}$,$\ln{ \mathrm{km/s} }$
+baseline_offset_flux_TESS,0.0,1,uniform -.01 .01, $\mathrm{TESS offset}$,
+baseline_offset_rv_KeckHIRES,0.0,1,uniform -0.1 0.1,$\mathrm{HIRES offset}$,$\mathrm{km/s}$
+baseline_slope_rv_KeckHIRES,-.02,1,uniform -0.1 0.0,$\mathrm{HIRES slope}$,$\mathrm{km/s}$
+baseline_offset_rv_KeckHIRESrm,0.0,1,uniform -0.1 0.1,$\mathrm{HIRESrm offset}$,$\mathrm{km/s}$
